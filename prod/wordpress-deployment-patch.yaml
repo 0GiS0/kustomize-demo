@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+spec:
+  template:
+    spec:      
+      containers:
+        - name: wordpress
+          env:           
+            - name: WORDPRESS_DB_PASSWORD
+              value: ""
+              valueFrom: 
+                secretKeyRef:
+                  name: dbpassword
+                  key: password
