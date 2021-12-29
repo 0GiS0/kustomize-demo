@@ -7,7 +7,9 @@ spec:
     spec:      
       containers:
         - name: wordpress
-          env:           
+          env:     
+            - name: WORDPRESS_DB_HOST
+              value: prod-wordpress-mysql      
             - name: WORDPRESS_DB_PASSWORD
               value: ""
               valueFrom: 
