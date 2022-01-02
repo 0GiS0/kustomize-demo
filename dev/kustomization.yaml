@@ -12,6 +12,7 @@ secretGenerator:
       - "password=Passw0rd"
 resources:
   - namespace.yaml
+  - wordpress-secrets.enc.yaml
 patchesStrategicMerge:
   - mysql-deployment-patch.yaml
   - wordpress-deployment-patch.yaml
